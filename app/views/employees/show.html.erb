@@ -1,0 +1,36 @@
+<h1>Generate Monthly Payslip</h1>
+<hr>
+<div id="employees">
+  <table>
+      <%#= render employee %>
+    <tr>
+      <td>Timestamp</td>
+      <td>: <%= @employee.created_at.strftime("%m-%e-%y %H:%M") %></td>
+    </tr>
+    <tr>
+      <td>Employee Name</td>
+      <td>: <%= @employee.name %></td>
+    </tr>
+    <tr>
+      <td>Gross Monthly Income</td>
+      <td>: <%= @employee.annual_salary %></td>
+    </tr>
+    <tr>
+      <td>Monthly Income Tax</td>
+      <td>: <%= @total_monthly_income_tax %></td>
+    </tr>
+    <tr>
+      <td>Net Monthly Income:</td>
+      <td>: <%= @total_net_monthly_income %></td>
+    </tr>
+  </table>
+</div>
+<div>
+  <%= link_to "Edit this employee", edit_employee_path(@employee), class:"btn btn-secondary" %> |
+  <%= link_to "Back to employees", employees_path, class:"btn btn-secondary" %>
+
+  <%= button_to "Destroy this employee", @employee, method: :delete, class:"btn btn-secondary" %>
+</div>
+
+
+<%= @returnArr %>

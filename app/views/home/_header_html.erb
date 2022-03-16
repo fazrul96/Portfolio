@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+  <%= link_to 'Portfolio', root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <%= link_to 'About Us', home_about_path, class:"nav-link" %>
+        </li>
+        <%# 
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to 'Add Employee', new_employee_path, class:"nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to 'Sign Out', destroy_user_session_path, class:"nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to 'Edit Profile', edit_user_registration_path, class:"nav-link" %>
+          </li>
+        <%# else %>
+          <li class="nav-item">
+            <%= link_to 'Employee', employees_path, class:"nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          </li>
+        <%# end %>
+
+        <%# new_user_session_path	GET	/users/sign_in(.:format)	
+        devise/sessions#new
+
+        user_session_path	POST	/users/sign_in(.:format)	
+        devise/sessions#create
+
+        destroy_user_session_path	DELETE	/users/sign_out(.:format)	
+        devise/sessions#destroy
+
+        new_user_password_path	GET	/users/password/new(.:format)	
+        devise/passwords#new
+
+        edit_user_password_path	GET	/users/password/edit(.:format)	
+        devise/passwords#edit
+
+        user_password_path	PATCH	/users/password(.:format)	
+        devise/passwords#update
+
+        PUT	/users/password(.:format)	
+        devise/passwords#update
+
+        POST	/users/password(.:format)	
+        devise/passwords#create
+
+        cancel_user_registration_path	GET	/users/cancel(.:format)	
+        devise/registrations#cancel
+
+        new_user_registration_path	GET	/users/sign_up(.:format)	
+        devise/registrations#new %>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>

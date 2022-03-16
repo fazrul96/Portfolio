@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  annual_salary: 9.99
+  monthly_income_tax: 9.99
+
+two:
+  name: MyText
+  annual_salary: 9.99
+  monthly_income_tax: 9.99

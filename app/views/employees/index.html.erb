@@ -1,0 +1,45 @@
+<%# if user_signed_in? %>
+<h1>Generate Monthly Payslip</h1>
+
+<div>
+  <%= form_tag(employees_path, method: :get) do %>
+    <p> Search for Employee </p>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag ("Search") %>
+  <% end %>
+</div><br>
+
+<div id="employees">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th><%= link_to "Employee Name", :sort => "name"%></th>
+        <th><%= link_to "Annual Salary", :sort => "annual_salary"%></th>
+        <th><%= link_to "Created DateTime", :sort => "created_at"%></th>
+        <th>Action </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @employees.each do |employee| %>
+          <%#= render employee %>
+        <%#= if employee.user == current_user %>
+          <tr>
+            <td>
+              <%= link_to employee.name, employee %>
+            </td>         
+            <td><%= employee.annual_salary %></td>
+            <td><%= employee.created_at.strftime("%m-%e-%y %H:%M") %></td>
+            <%# <td>= employee.created_at.to_s(:stamp)</td> %>
+            <td><%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-sm btn-outline-danger" %></td>
+          </tr>
+        <%# end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<hr>
+<%= link_to "New employee", new_employee_path, class:"btn btn-secondary" %>
+<%# else %>
+  <h1>Home#index</h1>
+  <p>Find me in app/views/home/index.html.erb</p>
+<%# end %>
