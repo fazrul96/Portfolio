@@ -14,9 +14,9 @@
     --color-bg: #1f1f38;
     --color-bg-variant: #2c2c6c;
     --color-primary: #4db5ff;
-    --color-primary-variant: #rgba(77 ,181, 255, 0.4);
+    --color-primary-variant: rgba(77 ,181, 255, 0.4);
     --color-white: #fff;
-    --color-light: #rgba(255, 255, 255, 0.6);
+    --color-light: rgba(255, 255, 255, 0.6);
 
     --transition: all 400ms ease;
 
@@ -37,10 +37,19 @@ body {
     font-family: "Poppins", sans-serif;
     background: var(--color-bg);
     color: var(--color-light);
-    line-height: 1.7;
+    /* line-height: 1.7; */
     background-image: url(../../assets/images/bg-texture.png)
 }
 
+#components-layout-demo-side .logo {
+    height: 32px;
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .site-layout .site-layout-background {
+    background: #fff;
+  }
 /* ============= GENERAL STYLES ============= */
 .container {
     width: var(--container-width-lg);

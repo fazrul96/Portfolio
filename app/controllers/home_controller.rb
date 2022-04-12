@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def resume
   end
+
+  def portfolio
+  end
 end

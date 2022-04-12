@@ -38,3 +38,14 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+*.env
+*.gem
+# *.log
+# test/*/tmp
+# test/*/public/packs
+# *.swp
+# /vendor/react
+# **/node_modules
+# react-builds/build
+# coverage/
