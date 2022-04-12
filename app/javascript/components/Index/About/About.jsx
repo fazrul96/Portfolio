@@ -28,18 +28,22 @@ const About = () => {
 
             <article className="about_card">
               <UserOutlined className="about_icon" />
-              <h5>Experience</h5>
-              <small>3+ Years Working </small>
+              <h5>Certificate</h5>
+              <small>CPRE and  Android ATC</small>
             </article>
 
             <article className="about_card">
               <UserOutlined className="about_icon" />
-              <h5>Experience</h5>
+              <h5>Achievements</h5>
               <small>3+ Years Working </small>
             </article>
 
             <p>
-              lorem Ips lorem conv lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor
+              Innovative, task-driven professional with 3+ years of
+              experience in web design and development across
+              diverse industries. Adept at leveraging superior
+              analytical thinking skills to prioritize tasks, identify
+              technical issues, and provide timely resolutions.
             </p>
           </div>
         </div>

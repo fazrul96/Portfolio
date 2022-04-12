@@ -15,35 +15,28 @@ const Experience = () => {
                         <article className="experience_details">
                             <UserOutlined className="experience_details-icon" />
                             <div>
-                                <h4>HTML</h4>
+                                <h4>ReactJS</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
                         </article>
                         <article className="experience_details">
                             <UserOutlined className="experience_details-icon" />
                             <div>
-                                <h4>HTML</h4>
+                                <h4>Javascript</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
                         </article>
                         <article className="experience_details">
                             <UserOutlined className="experience_details-icon" />
                             <div>
-                                <h4>HTML</h4>
+                                <h4>HTML and CSS</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
                         </article>
                         <article className="experience_details">
                             <UserOutlined className="experience_details-icon" />
                             <div>
-                                <h4>HTML</h4>
-                                <small className="text-light">Experienced</small>
-                            </div>
-                        </article>
-                        <article className="experience_details">
-                            <UserOutlined className="experience_details-icon" />
-                            <div>
-                                <h4>HTML</h4>
+                                <h4>Git</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
                         </article>
@@ -55,35 +48,28 @@ const Experience = () => {
                         <article className="experience_details">
                             <UserOutlined className="experience_details-icon" />
                             <div>
-                                <h4>HTML</h4>
+                                <h4>PHP (Laravel, CI)</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
                         </article>
                         <article className="experience_details">
                             <UserOutlined className="experience_details-icon" />
                             <div>
-                                <h4>HTML</h4>
+                                <h4>Ruby on Rails</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
                         </article>
                         <article className="experience_details">
                             <UserOutlined className="experience_details-icon" />
                             <div>
-                                <h4>HTML</h4>
+                                <h4>SQL</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
                         </article>
                         <article className="experience_details">
                             <UserOutlined className="experience_details-icon" />
                             <div>
-                                <h4>HTML</h4>
-                                <small className="text-light">Experienced</small>
-                            </div>
-                        </article>
-                        <article className="experience_details">
-                            <UserOutlined className="experience_details-icon" />
-                            <div>
-                                <h4>HTML</h4>
+                                <h4>VBA</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
                         </article>
