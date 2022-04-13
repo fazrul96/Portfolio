@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import Header from './Index/Header/Header';
-import HeaderIntro from './Index/Header/HeaderIntro';
-import Nav from './Index/Nav/Nav';
-import About from './Index/About/About';
-import Experience from './Index/Experience/Experience';
-import Services from './Index/Services/Services';
-import Portfolio from './Index/Portfolio/Portfolio';
-import Testimonials from './Index/Testimonials/Testimonials';
-import Contact from './Index/Contact/Contact';
-// import Card from './Index/Card/Card';
-import Footer from './Index/Footer/Footer';
+import Header from './Index/Header';
+import HeaderIntro from './Index/Header';
+import Nav from './Index/Nav';
+import About from './Index/About';
+import Experience from './Index/Experience';
+import Services from './Index/Services';
+import Portfolio from './Index/Portfolio';
+import Testimonials from './Index/Testimonials';
+import Contact from './Index/Contact';
+// import Card from './Index/Card';
+import Footer from './Index/Footer';
 
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { DesktopOutlined, PieChartOutlined, TeamOutlined, UserOutlined} from '@ant-design/icons';
