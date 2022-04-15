@@ -34,7 +34,7 @@
 
 .footer_socials a {
     background: var(--color-bg);
-    color: var(--color-white);
+    /* color: var(--color-white); */
     padding: 0.8rem;
     border-radius: 0.7rem;
     display: flex;
@@ -49,6 +49,9 @@
 
 .footer_copyright {
     margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     color: var(--color-bg)
 }
 

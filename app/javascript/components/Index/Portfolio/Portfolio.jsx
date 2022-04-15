@@ -1,26 +1,27 @@
-import React from 'react'
+import React from 'react';
 import './portfolio.css';
-import portfolio from '../../../../assets/images/portfolio1.jpg'
+import portfolio from '../../../../assets/images/portfolio1.jpg';
+import { Image } from "antd";
 
 const data = [
   {
     id:1,
     image: portfolio,
-    title: 'Portfolio',
+    title: 'Homestay',
     github: 'https://github.com',
     demo: 'https://dribble.com'
   },
   {
     id:2,
     image: portfolio,
-    title: 'Portfolio',
+    title: 'Intelligent Food',
     github: 'https://github.com',
     demo: 'https://dribble.com'
   },
   {
     id:3,
     image: portfolio,
-    title: 'Portfolio',
+    title: 'Guard',
     github: 'https://github.com',
     demo: 'https://dribble.com'
   }
@@ -38,7 +39,9 @@ const Portfolio = () => {
             return (
               <article key={id} className="portfolio_item">
                 <div className="portfolio_item-image">
-                  <img src={image} alt={title} />
+                  <Image.PreviewGroup>
+                    <Image src={image} alt={title} />
+                  </Image.PreviewGroup>
                 </div>
                 <h3 className="text-light">{title}</h3>
                 <div className="portfolio_item-cta">

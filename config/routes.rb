@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   root 'home#index'
   # get 'home/index'
+  get 'home/test'
   get 'home/portfolio'
   get 'home/about'
   get 'home/resume'

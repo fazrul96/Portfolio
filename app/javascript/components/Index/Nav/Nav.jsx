@@ -1,18 +1,17 @@
-import React, {useState} from 'react'
-import { HomeOutlined, UserAddOutlined, BookOutlined, CustomerServiceOutlined, MessageOutlined } from "@ant-design/icons";
-import './nav.css'
+import React from 'react';
+import { HomeOutlined, UserOutlined, BookOutlined, MessageOutlined, GithubOutlined } from "@ant-design/icons";
+import { Link } from 'react-scroll';
+import './nav.css';
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState('#')
   return (
     <nav>
-      <a href="#" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><HomeOutlined /></a>
-      <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><UserAddOutlined /></a>
-      <a href="#experience" onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' ? 'active' : ''}><BookOutlined /></a>
-      <a href="#services" onClick={() => setActiveNav('#services')} className={activeNav === '#services' ? 'active' : ''}><CustomerServiceOutlined /></a>
-      <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><MessageOutlined /></a>
+      <Link activeClass="active" to="home" spy={true} smooth={true}><HomeOutlined /></Link>
+      <Link  to="about" spy={true} smooth={true}><UserOutlined /></Link>
+      <Link  to="experience" spy={true} smooth={true}><BookOutlined /></Link>
+      <Link  to="portfolio" spy={true} smooth={true}><GithubOutlined /></Link>
+      <Link  to="contact" spy={true} smooth={true}><MessageOutlined /></Link>
     </nav>
   )
 }
-
 export default Nav

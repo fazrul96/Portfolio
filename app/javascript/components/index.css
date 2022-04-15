@@ -44,7 +44,7 @@ body {
 #components-layout-demo-side .logo {
     height: 32px;
     margin: 16px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(245, 6, 6, 0.3);
   }
   
   .site-layout .site-layout-background {
@@ -92,6 +92,7 @@ a:hover {
 }
 
 .btn {
+    margin-right: 10px;
     width: max-content;
     display: inline-block;
     color: var(--color-primary);

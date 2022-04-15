@@ -29,6 +29,13 @@
     transform: rotate(0);
 }
 
+p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: "center";
+}
+
 .about_cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -79,6 +86,10 @@
     .about_me {
         width: 50%;
         margin: 2rem auto 4rem;
+    }
+
+    .about_card {
+        padding: 0.5rem;
     }
 
     .about_content p {

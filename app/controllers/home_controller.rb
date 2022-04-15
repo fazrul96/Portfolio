@@ -10,4 +10,7 @@ class HomeController < ApplicationController
 
   def portfolio
   end
+
+  def test
+  end
 end

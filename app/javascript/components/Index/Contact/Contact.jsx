@@ -1,8 +1,8 @@
 import React, {useRef} from 'react';
-import './contact.css';
-import { UserOutlined } from "@ant-design/icons";
+import { MailOutlined, MessageOutlined, PhoneOutlined } from "@ant-design/icons";
 import emailjs from '@emailjs/browser';
 import env from "react-dotenv";
+import './contact.css';
 
 const Contact = () => {
   const form = useRef();
@@ -26,22 +26,14 @@ const Contact = () => {
       <div className="container contact_container">
         <div className="contact_options">
           <article className="contact_option">
-            <UserOutlined className="contact_option-icon"/>
+            <MailOutlined className="contact_option-icon"/>
             <h4>Email</h4>
-            <h5>mfazrul07@gmail.com</h5>
-            <a href="mailto:mfazrul07@gmail.com">Send a message</a>
+            <a href="mailto:mfazrul07@gmail.com">Email Me</a>
           </article>
           <article className="contact_option">
-            <UserOutlined className="contact_option-icon" />
-            <h4>Email</h4>
-            <h5>mfazrul07@gmail.com</h5>
-            <a href="mailto:mfazrul07@gmail.com">Send a message</a>
-          </article>
-          <article className="contact_option">
-            <UserOutlined className="contact_option-icon"/>
-            <h4>Email</h4>
-            <h5>mfazrul07@gmail.com</h5>
-            <a href="mailto:mfazrul07@gmail.com">Send a message</a>
+            <MessageOutlined className="contact_option-icon" />
+            <h4>Whatsapp</h4>
+            <a href="https://wa.me/+60199508927" target="_blank">Whatsapp Me</a>
           </article>
         </div>
         <form ref={form} onSubmit={sendEmail}>

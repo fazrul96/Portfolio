@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useRouteMatch, useParams } from "react-router-dom";
 import Home from "../components/Home";
+import Test from "../components/Test";
 import Resume from "../components/Index/Resume/Resume";
 // import Calendar from "../components/Index/Calendar/Calendar";
 
@@ -9,6 +10,7 @@ export default (
     <Router>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/home/test" element={<Test />}></Route>
         <Route path="/home/resume" element={<Resume />}></Route>
       </Routes>
     </Router>

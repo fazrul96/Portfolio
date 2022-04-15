@@ -41,11 +41,11 @@ yarn-debug.log*
 
 *.env
 *.gem
-# *.log
+*.log
 # test/*/tmp
 # test/*/public/packs
 # *.swp
 # /vendor/react
-# **/node_modules
-# react-builds/build
+**/node_modules
+react-builds/build
 # coverage/
