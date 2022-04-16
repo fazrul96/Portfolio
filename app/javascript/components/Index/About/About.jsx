@@ -1,8 +1,10 @@
-import React from 'react'
-import ME from '../../../../assets/images/me1.jpg';
-import './about.css'
+import React from 'react';
 import { UserOutlined, StarOutlined, SafetyCertificateOutlined } from "@ant-design/icons";
-import { Image } from "antd";
+import { Image, Card, Col, Row, Avatar  } from "antd";
+
+import ME from '../../../../assets/images/me1.jpg';
+
+const { Meta } = Card;
 
 const data = [
   {
@@ -31,37 +33,35 @@ const About = () => {
       <h5>Get To Know</h5>
       <h2>About Me</h2>
 
-      <div className="container about_container">
-        <div className="about_me">
-          <div className="about_me-image">
-            <Image.PreviewGroup>
-              <Image src={ME} alt="About Image" />
-            </Image.PreviewGroup>
-          </div>
-        </div>
-        <div className="about_content">
-          <div className="about_cards">
+      <div className="site-card-wrapper">
+        <Row gutter={16}>
+          <Col span={9}>
+            <Card bordered={false}>
+              {/* <Image.PreviewGroup>
+                <Image src={ME} alt="About Image" />
+              </Image.PreviewGroup> */}
+            </Card>
+          </Col>
           {
             data.map(({id, icon, title, description}) => {
               return (
-                <article key={id} className="about_card">
-                  {icon}
-                  <h5 className="text-light">{title}</h5>
-                  <small className="text-light">{description}</small>
-                </article>
+                <Col key={id} span={5}>
+                  <Card title={icon} bordered={false} style={{ textAlign: 'center'}}>
+                    <Meta
+                      style={{ textAlign: 'left'}}
+                      avatar={<Avatar src={icon} />}
+                      title={title}
+                      description={description}
+                    />
+                  </Card>
+                </Col>
               )
             })
           }
-          </div>
-          <br/>
-          <p style={{ textAlign: "center" }}>
-            Innovative, task-driven professional with 3+ years of experience in web design and development across diverse industries. Adept at leveraging superior analytical thinking skills to prioritize tasks, identify technical issues, and provide timely resolutions.
-          </p>
-
-          <p style={{ textAlign: "center" }}>
-            Yevgeniy (Jim) Brikman loves programming, writing, speaking, traveling, and lifting heavy things. He does not love talking about himself in the 3rd person. He is the co-founder of Gruntwork, a company that provides DevOps as a Service. He's also the author of two books published by O'Reilly Media: Hello, Startup and Terraform: Up & Running. Previously, he spent more than a decade building infrastructure and products that served hundreds of millions of users while working as a software engineer at LinkedIn, TripAdvisor, Cisco Systems, and Thomson Financial. For more info, check out his writing, speaking, projects, and photos.
-          </p>
-        </div>
+        </Row>
+        <p style={{ textAlign: "center" }}>
+          Innovative, task-driven professional with 3+ years of experience in web development across diverse industries. Adept at leveraging superior analytical thinking skills to prioritize tasks, identify technical issues, and provide timely resolutions. For more info, check out my resume, projects and blog.
+        </p>
       </div>
     </section>
   )

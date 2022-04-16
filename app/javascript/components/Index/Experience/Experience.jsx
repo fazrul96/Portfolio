@@ -1,111 +1,195 @@
-import React from "react";
-import { UserOutlined } from "@ant-design/icons";
-import './experience.css';
+import React, { useState } from "react";
+import { Card, Avatar, Badge } from 'antd';
 
-const frontend = [
+const { Meta } = Card;
+
+const gridStyle = {
+    width: '50%',
+    textAlign: 'left'
+};
+
+const tabList = [
+    {
+        key: 'Frontend',
+        tab: 'Frontend',
+    },
+    {
+        key: 'Backend',
+        tab: 'Backend',
+    },
+    {
+        key: 'Additional',
+        tab: 'Additional',
+    },
+];
+
+const frontendData = [
     {
         id:1,
-        icon: <UserOutlined className="experience_details-icon" />,
-        title: 'ReactJS',
-        description: 'Experienced'
+        title: 'Bootstrap',
+        level: 'Intermediate'
     },
     {
         id:2,
-        icon: <UserOutlined className="experience_details-icon" />,
-        title: 'Javascript',
-        description: 'Experienced'
+        title: 'ReactJS',
+        level: 'Beginner'
     },
     {
         id:3,
-        icon: <UserOutlined className="experience_details-icon" />,
-        title: 'HTML',
-        description: 'Experienced'
+        title: 'HTML5',
+        level: 'Intermediate'
     },
     {
         id:4,
-        icon: <UserOutlined className="experience_details-icon" />,
-        title: 'CSS',
-        description: 'Experienced'
+        title: 'Javascript',
+        level: 'Beginner'
     },
     {
         id:5,
-        icon: <UserOutlined className="experience_details-icon" />,
+        title: 'CSS',
+        level: 'Intermediate'
+    },
+    {
+        id:6,
         title: 'Git',
-        description: 'Experienced'
+        level: 'Intermediate'
     }
 ]
 
-const backend = [
+const backendData = [
     {
         id:1,
-        icon: <UserOutlined className="experience_details-icon" />,
         title: 'PHP',
-        description: 'Experienced'
+        level: 'Intermediate'
     },
     {
         id:2,
-        icon: <UserOutlined className="experience_details-icon" />,
-        title: 'Ruby on Rails',
-        description: 'Experienced'
+        title: 'Ruby',
+        level: 'Beginner'
     },
     {
         id:3,
-        icon: <UserOutlined className="experience_details-icon" />,
-        title: 'SQL',
-        description: 'Experienced'
+        title: 'VBA',
+        level: 'Intermediate'
     },
     {
         id:4,
-        icon: <UserOutlined className="experience_details-icon" />,
-        title: 'VBA',
-        description: 'Experienced'
+        title: 'Python',
+        level: 'Beginner'
+    },
+    {
+        id:5,
+        title: 'Java',
+        level: 'Beginner'
+    },
+    {
+        id:6,
+        title: 'SQL',
+        level: 'Intermediate'
     }
 ]
 
+const additionalData = [
+    {
+        id:1,
+        title: 'Adobe Photoshop',
+        level: 'Intermediate'
+    },
+    {
+        id:2,
+        title: 'Adobe After Effect',
+        level: 'Beginner'
+    },
+    {
+        id:3,
+        title: 'Unity',
+        level: 'Beginner'
+    }
+]
+
+const developmentList = {
+    Frontend: 
+    <>
+        {
+          frontendData.map(({id, title, level}) => {
+            return (
+            <Badge.Ribbon key={id} text="New">
+                <Card.Grid key={id} style={gridStyle}>
+                    <Meta
+                        avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                        title={title}
+                        description={level}
+                    />
+                </Card.Grid>
+            </Badge.Ribbon>
+            )
+          })
+        }
+    </>,
+    Backend: 
+    <>
+        {
+          backendData.map(({id, title, level}) => {
+            return (
+            <Badge.Ribbon key={id} text="New">
+                <Card.Grid key={id} style={gridStyle}>
+                    <Meta
+                        avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                        title={title}
+                        description={level}
+                    />
+                </Card.Grid>
+            </Badge.Ribbon>
+            )
+          })
+        }
+    </>,
+    Additional: 
+    <>
+        {
+          additionalData.map(({id, title, level}) => {
+            return (
+            <Badge.Ribbon key={id} text="New">
+                <Card.Grid key={id} style={gridStyle}>
+                    <Meta
+                        avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                        title={title}
+                        description={level}
+                    />
+                </Card.Grid>
+            </Badge.Ribbon>
+            )
+          })
+        }
+    </>
+};
+
 const Experience = () => {
+    const [activeTabKey, setActiveTabKey] = useState('Frontend');
+
+    const onTabChange = key => {
+        setActiveTabKey(key);
+    };
+  
     return (
         <section id="experience">
             <h5>What skills I Have</h5>
             <h2>My Experience</h2>
 
-            <div className="container experience_container">
-                <div className="experience_frontend">
-                    <h3>Frontend Development</h3>
-                    <div className="experience_content">
-                        {
-                            frontend.map(({id, icon, title, description}) => {
-                            return (
-                                <article key={id} className="experience_details">
-                                {icon}
-                                    <div>
-                                        <h4>{title}</h4>
-                                        <small className="text-light">{description}</small>
-                                    </div>
-                                </article>
-                            )
-                            })
-                        }
-                    </div>
-                </div>
-                <div className="experience_backend">
-                    <h3>Backend Development</h3>
-                    <div className="experience_content">
-                        {
-                            backend.map(({id, icon, title, description}) => {
-                            return (
-                                <article key={id} className="experience_details">
-                                {icon}
-                                    <div>
-                                        <h4>{title}</h4>
-                                        <small className="text-light">{description}</small>
-                                    </div>
-                                </article>
-                            )
-                            })
-                        }
-                    </div>
-                </div>
-            </div>
+            <div className="site-card-wrapper">
+            <Card
+                style={{ width: '100%', textAlign: 'center'}}
+                title="Development Skills"
+                tabList={tabList}
+                activeTabKey={activeTabKey}
+                onTabChange={key => {
+                onTabChange(key);
+                }}
+            >
+                {developmentList[activeTabKey]}
+            </Card>
+            
+          </div>
         </section>
     )
 }

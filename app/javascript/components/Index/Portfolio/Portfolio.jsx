@@ -1,7 +1,9 @@
 import React from 'react';
-import './portfolio.css';
+import { Image, Card } from "antd";
+
 import portfolio from '../../../../assets/images/portfolio1.jpg';
-import { Image } from "antd";
+
+const { Meta } = Card;
 
 const data = [
   {
@@ -27,32 +29,43 @@ const data = [
   }
 ]
 
+const gridStyle = {
+  width: '50%',
+  justifyContent: 'center',
+};
+
 const Portfolio = () => {
   return (
     <section id="portfolio">
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
 
-      <div className="container portfolio_container">
+      <Card title="List of Projects Available" style={{ width: '100%', textAlign: 'center'}}>
         {
           data.map(({id, image, title, github, demo}) => {
             return (
-              <article key={id} className="portfolio_item">
-                <div className="portfolio_item-image">
-                  <Image.PreviewGroup>
-                    <Image src={image} alt={title} />
-                  </Image.PreviewGroup>
-                </div>
-                <h3 className="text-light">{title}</h3>
-                <div className="portfolio_item-cta">
-                  <a href={github} className="btn">Github</a>
-                  <a href={demo} className="btn btn-primary" target="_blank">Live Demo</a>
-                </div>
-              </article>
+              <Card.Grid key={id} style={gridStyle}>
+                <Image.PreviewGroup>
+                  <Image src={image} alt={title} />
+                </Image.PreviewGroup>
+                <Card
+                  bordered={false}
+                  actions={[
+                    "Intro",
+                    "Github",
+                    "Demo",
+                  ]}>
+                  
+                  <Meta
+                    title={title}
+                    description="This is the description"
+                  />
+                </Card>
+              </Card.Grid>
             )
           })
         }
-      </div>
+      </Card>      
     </section>
   )
 }

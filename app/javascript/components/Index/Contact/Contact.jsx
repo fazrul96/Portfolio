@@ -27,12 +27,12 @@ const Contact = () => {
         <div className="contact_options">
           <article className="contact_option">
             <MailOutlined className="contact_option-icon"/>
-            <h4>Email</h4>
+            <h4 className="text-light">Email</h4>
             <a href="mailto:mfazrul07@gmail.com">Email Me</a>
           </article>
           <article className="contact_option">
             <MessageOutlined className="contact_option-icon" />
-            <h4>Whatsapp</h4>
+            <h4 className="text-light">Whatsapp</h4>
             <a href="https://wa.me/+60199508927" target="_blank">Whatsapp Me</a>
           </article>
         </div>

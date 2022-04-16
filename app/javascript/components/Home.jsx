@@ -13,7 +13,7 @@ import Contact from './Index/Contact';
 // import Card from './Index/Card';
 import Footer from './Index/Footer';
 
-import { Layout, Menu, Breadcrumb, Divider } from 'antd';
+import { Layout, Menu, Divider } from 'antd';
 import { TeamOutlined, UserOutlined, BookOutlined, GithubOutlined, MessageOutlined, FileOutlined, BookFilled} from '@ant-design/icons';
 
 import env from "react-dotenv";
@@ -77,13 +77,6 @@ class Home extends React.Component {
         <Layout className="site-layout">
           {/* <Header className="site-layout-background" style={{ padding: 0 }} /> */}
           <Content style={{ margin: '0 16px' }}>
-            {/* <Breadcrumb style={{ margin: '16px 0', padding: "0 50px" }}>
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Fazrul</Breadcrumb.Item>
-            </Breadcrumb>
-            <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-              Bill is a cat.
-            </div> */}
             <HeaderIntro />
             <Nav />
             <About />

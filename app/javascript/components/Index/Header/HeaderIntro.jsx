@@ -13,9 +13,9 @@ const HeaderIntro = () => {
   return (
     <section id="home">
       <div className="container header_container">
-          <h5>Hi I'm</h5>
+          <h2>Hi I'm</h2>
           <h1>Fazrul Romli</h1>
-          <h5>Software Developer</h5>
+          <h2>Software Developer</h2>
           
           <a href={CV} download className="btn"><DownloadOutlined /> Download Resume</a>
           <Link to="contact" className="btn btn-primary" spy={true} smooth={true}>Let's Talk</Link>
